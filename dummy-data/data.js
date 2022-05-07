@@ -22,15 +22,15 @@ export const CONTENT =[
     {
         "id": 2,
         "name": "Primeros Pasos en Python",
-        "subtopics": [{
-            name: "Comentarios",
-            name:"Sangría",
-            name:"Mostrar datos en Pantalla",
-            name:"Lectura de datos por teclado",
-            name:"Operadores Aritméticos",
-            name:"Variables",
-            name:"Trabar con cadenas",
-            name:"Convertir tipo de datos"}
+        "subtopics": [
+            "Comentarios",
+            "Sangría",
+            "Mostrar datos en Pantalla",
+            "Lectura de datos por teclado",
+            "Operadores Aritméticos",
+            "Variables",
+            "Trabar con cadenas",
+            "Convertir tipo de datos"
         ],
         "lessons": [
             {
