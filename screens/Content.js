@@ -1,15 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
-import { ImageBackground, StyleSheet, View, ScrollView } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, ScrollView, FlatList } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SubjectBtn from '../components/SubjectBtn';
+import { CONTENT } from '../dummy-data/data';
+//import { CONTENT } from '../dummy-data/content';
 
 export default function App({ navigation }) {
 
+    const dataInfo = CONTENT[1]
+
     function goToLessons(){
-        navigation.navigate("Lessons");
+        navigation.navigate("Lessons",{dataInfo});
     }
+
+    const renderItem = ({ item }) => (
+        <SubjectBtn text={item.name} image={item.img} action={goToLessons}
+        />
+    );
 
     return (
         <View style={styles.container}>
@@ -21,27 +30,14 @@ export default function App({ navigation }) {
 
             <View style={{ alignItems: 'center', justifyContent: 'center' }}>
 
-                <ScrollView style={{marginTop: 90}}>
-                    <SubjectBtn text={"Introducción"} image={require('../assets/presentacion.png')} action={goToLessons}/>
-
-                    <SubjectBtn text={"Sintaxis"} image={require('../assets/presentacion.png')}/>
-
-                    <SubjectBtn text={"Variables"} image={require('../assets/presentacion.png')}/>
-
-                    <SubjectBtn text={"Tipos de Datos"} image={require('../assets/presentacion.png')}/>
-
-                    <SubjectBtn text={"Listas"} image={require('../assets/presentacion.png')}/>
-
-                    <SubjectBtn text={"For"} image={require('../assets/presentacion.png')}/>
-
-                    <SubjectBtn text={"While"} image={require('../assets/presentacion.png')}/>
-
-                    <SubjectBtn text={"Matrices"} image={require('../assets/presentacion.png')}/>
-                </ScrollView>
+                <FlatList style = {{marginTop: 90}}
+                    data={ CONTENT }
+                    renderItem={ renderItem }
+                />
 
             </View>
             
-        <StatusBar style="auto" />
+        <StatusBar style={"light"} />
         </View>
     );
 }

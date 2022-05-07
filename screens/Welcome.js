@@ -49,7 +49,7 @@ export default function App({ navigation }) {
 
 
             </View>
-        <StatusBar style="auto" />
+        <StatusBar style={"light"} />
         </View>
     );
 }

@@ -1,17 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { ImageBackground, StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionBtn from '../components/SectionBtn';
 import LessonHdr from '../components/LessonHdr';
+//export default function App({ navigation })
 
-export default function App({ navigation }) {
+const Lessons = (props) => {
+
+    console.log({props})
 
     function goToSubject(){
-        navigation.navigate("Subject");
+        props.navigation.navigate("Subject");
     }
 
+    const renderItem = ({ item }) => (
+        <SectionBtn title={item.subtopics} />
+    );
+        
     return (
         <View style={styles.container}>
             <LinearGradient
@@ -30,27 +37,22 @@ export default function App({ navigation }) {
                         <LessonHdr title={"Introducción"} image={require('../assets/presentacion.png')}/>
 
                         <View style={styles.body}>
-                            <ScrollView>
-                                <SectionBtn title={"Sección 1: ¿Qué es Python?"} time={"5 min"} action={goToSubject}/>
-                                <SectionBtn title={"Sección 2: Primeros Pasos"} time={"7 min"} action={goToSubject}/>
-                                <SectionBtn title={"Sección 3: Operadores Aritméticos"} time={"5 min"} action={goToSubject}/>
-                                <SectionBtn title={"Sección 4: Definición de variables"} time={"5 min"} action={goToSubject}/>
-                                <SectionBtn title={"Sección 5: Trabajando con cadenas"} time={"4 min"} action={goToSubject}/>
-                                <SectionBtn title={"Sección 6: Conversión de tipos de datos"} time={"8 min"} action={goToSubject}/>
-                                <SectionBtn title={""} time={""} action={goToSubject}/>
-                                <SectionBtn title={""} time={""} action={goToSubject}/>
-                            </ScrollView>
-                            
+                            <FlatList
+                                data={ props.dataInfo.subtopics }
+                                renderItem={ renderItem }
+                            />  
                         </View>
 
                     </View>
 
                 </View>
             
-        <StatusBar style="auto" />
+            <StatusBar style={"light"} />
         </View>
     );
 }
+
+export default Lessons;
 
 const styles = StyleSheet.create({
     container: {
