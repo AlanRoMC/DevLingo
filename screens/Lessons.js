@@ -21,7 +21,7 @@ const Lessons = ( {route} ) => {
     }
 
     const renderItem = ({ item }) => (
-        <SectionBtn title={item.subtopics}/>
+        <SectionBtn title={item.name} time={item.time}/>
     );
     
     console.log(CONTENT[idK-1].subtopics)
@@ -45,7 +45,7 @@ const Lessons = ( {route} ) => {
 
                         <View style={styles.body}>
                             <FlatList
-                                data={ CONTENT[idK-1] }
+                                data={ CONTENT[idK-1].subtopics }
                                 renderItem={ renderItem }
                             />  
                         </View>

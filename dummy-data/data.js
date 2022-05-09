@@ -3,9 +3,12 @@ export const CONTENT =[
         "id": 1,
         "name": "Introducción a Python",
         "img": "https://cdn-icons-png.flaticon.com/512/263/263066.png",
-        "subtopics": 
-            "Comentarios"
-        ,
+        "subtopics": [
+            {name: "Comentarios",
+                time: "5 min"},
+            {name: "Pesos",
+                time: "7 min"}
+        ],
         "lessons": [
             {
                 "id": 1,
@@ -24,14 +27,22 @@ export const CONTENT =[
         "name": "Primeros Pasos en Python",
         "img": "https://cdn-icons-png.flaticon.com/512/263/263094.png",
         "subtopics": [
-            "Comentarios",
-            "Sangría",
-            "Mostrar datos en Pantalla",
-            "Lectura de datos por teclado",
-            "Operadores Aritméticos",
-            "Variables",
-            "Trabar con cadenas",
-            "Convertir tipo de datos"
+            {name:"Comentarios",
+                time:" min"},
+            {name:"Sangría",
+                time:" min"},
+            {name:"Mostrar datos en Pantalla",
+                time:" min"},
+            {name:"Lectura de datos por teclado",
+                time:" min"},
+            {name:"Operadores Aritméticos",
+                time:" min"},
+            {name:"Variables",
+                time:" min"},
+            {name:"Trabar con cadenas",
+                time:" min"},
+            {name:"Convertir tipo de datos",
+                time:" min"},
         ],
         "lessons": [
             {
@@ -121,11 +132,16 @@ export const CONTENT =[
         "name": "Condicionales en Python",
         "img": "https://cdn-icons-png.flaticon.com/512/4696/4696519.png",
         "subtopics": [
-            "Operadores de comparación",
-            "Operadores Lógicos",
-            "Función IF()",
-            "Función ELIF()",
-            "Función ELSE()"
+            {name:"Operadores de comparación",
+                time:" min"},
+            {name:"Operadores Lógicos",
+                time:" min"},
+            {name:"Función IF()",
+                time:" min"},
+            {name:"Función ELIF()",
+                time:" min"},
+            {name:"Función ELSE()",
+                time:" min"},
         ],
         "lessons": [
             {
@@ -185,9 +201,12 @@ export const CONTENT =[
         "name": "Ciclos en Python",
         "img": "https://cdn-icons-png.flaticon.com/512/263/263110.png",
         "subtopics": [
-            "Ciclo While en Python",
-            "La instrucción Break()",
-            "Ciclo For() en Python"
+            {name:"Ciclo While en Python",
+                time:" min"},
+            {name:"La instrucción Break()",
+                time:" min"},
+            {name:"Ciclo For() en Python",
+                time:" min"},
         ],
         "lessons": [
             {
