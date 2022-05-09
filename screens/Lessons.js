@@ -5,20 +5,27 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionBtn from '../components/SectionBtn';
 import LessonHdr from '../components/LessonHdr';
-//export default function App({ navigation })
 
-const Lessons = (props) => {
+import { CONTENT } from '../dummy-data/data';
 
-    console.log({props})
+const Lessons = ( {route} ) => {
+
+    console.log(route.params.paramKey)
+    const idK = route.params.paramKey;
+
+    const titleStr = CONTENT[idK-1].name;
+    const imgC = CONTENT[idK-1].img;
 
     function goToSubject(){
         props.navigation.navigate("Subject");
     }
 
     const renderItem = ({ item }) => (
-        <SectionBtn title={item.subtopics} />
+        <SectionBtn title={item.subtopics}/>
     );
-        
+    
+    console.log(CONTENT[idK-1].subtopics)
+
     return (
         <View style={styles.container}>
             <LinearGradient
@@ -34,11 +41,11 @@ const Lessons = (props) => {
                         style={styles.background2}
                         start={{x: 0.8, y: 0.4}} end={{x: 0, y: 0.5}}
                     />
-                        <LessonHdr title={"Introducción"} image={require('../assets/presentacion.png')}/>
+                        <LessonHdr title={titleStr} image={{uri:imgC}}/>
 
                         <View style={styles.body}>
                             <FlatList
-                                data={ props.dataInfo.subtopics }
+                                data={ CONTENT[idK-1] }
                                 renderItem={ renderItem }
                             />  
                         </View>

@@ -7,16 +7,10 @@ import SubjectBtn from '../components/SubjectBtn';
 import { CONTENT } from '../dummy-data/data';
 //import { CONTENT } from '../dummy-data/content';
 
-export default function App({ navigation }) {
-
-    const dataInfo = CONTENT[1]
-
-    function goToLessons(){
-        navigation.navigate("Lessons",{dataInfo});
-    }
+const Content = ({ navigation }) => {
 
     const renderItem = ({ item }) => (
-        <SubjectBtn text={item.name} image={item.img} action={goToLessons}
+        <SubjectBtn text={item.name} image={item.img} action={() => navigation.navigate("Lessons", {paramKey: item.id})}
         />
     );
 
@@ -41,6 +35,8 @@ export default function App({ navigation }) {
         </View>
     );
 }
+
+export default Content;
 
 const styles = StyleSheet.create({
     container: {

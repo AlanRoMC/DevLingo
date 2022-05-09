@@ -2,10 +2,10 @@ export const CONTENT =[
     {
         "id": 1,
         "name": "Introducción a Python",
-        "img": "https://cdn-icons-png.flaticon.com/512/6812/6812599.png",
-        "subtopics": [
-            "Nepes"
-        ],
+        "img": "https://cdn-icons-png.flaticon.com/512/263/263066.png",
+        "subtopics": 
+            "Comentarios"
+        ,
         "lessons": [
             {
                 "id": 1,
@@ -22,6 +22,7 @@ export const CONTENT =[
     {
         "id": 2,
         "name": "Primeros Pasos en Python",
+        "img": "https://cdn-icons-png.flaticon.com/512/263/263094.png",
         "subtopics": [
             "Comentarios",
             "Sangría",
@@ -118,6 +119,7 @@ export const CONTENT =[
     {
         "id": 3,
         "name": "Condicionales en Python",
+        "img": "https://cdn-icons-png.flaticon.com/512/4696/4696519.png",
         "subtopics": [
             "Operadores de comparación",
             "Operadores Lógicos",
@@ -181,6 +183,7 @@ export const CONTENT =[
     {
         "id": 4,
         "name": "Ciclos en Python",
+        "img": "https://cdn-icons-png.flaticon.com/512/263/263110.png",
         "subtopics": [
             "Ciclo While en Python",
             "La instrucción Break()",
