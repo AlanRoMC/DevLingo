@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, Image, View, ImageBackground } from 'react-native';
+import { TouchableOpacity, Text, Image, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function SubjectBtn(props) {
@@ -8,10 +8,8 @@ export default function SubjectBtn(props) {
             onPress={props.action}
             style = {{
                 backgroundColor:'#971133',
-                //backgroundColor:'transparent',
                 fontFamily:'sans-serif-light',
                 width: 400,
-                //height: 120,
                 justifyContent: "space-between",
                 alignItems: 'center',
                 borderRadius: 30,
@@ -37,56 +35,3 @@ export default function SubjectBtn(props) {
         </TouchableOpacity>
     );
 }
-/*
-<TouchableOpacity
-            onPress={props.action}
-            style = {{
-                //backgroundColor:'black',
-                backgroundColor:'transparent',
-                fontFamily:'sans-serif-light',
-                width: 400,
-                height: 120,
-                justifyContent: "space-between",
-                alignItems: 'center',
-                borderRadius: 30,
-                flexDirection: "row",
-                flexWrap: "wrap",
-                alignContent: 'center',
-                borderColor: 'black',
-                borderWidth: 1,
-                marginBottom: 20
-            }}>
-            
-            <View style={{backgroundColor: 'rgba(255, 255, 255, .2)', height:90, width: 90, borderRadius: 60, marginLeft: 20}}>
-                <Image style={{height:60, width:60, margin: 15}} source={props.image}/>
-            </View>
-            <Text style={{color:'white', fontSize: 18, fontFamily:'sans-serif', marginRight: 20, paddingTop: 40}}>{props.text}</Text>
-            
-        </TouchableOpacity>
-
-        <ImageBackground source={require('../assets/Rectangle44.png')} resizeMode="cover" style={{height:127, width:400, marginBottom: 20, borderRadius: 30}}>
-            <TouchableOpacity
-                onPress={props.action}
-                style = {{
-                    //backgroundColor:'black',
-                    backgroundColor:'transparent',
-                    fontFamily:'sans-serif-light',
-                    width: 400,
-                    height: 120,
-                    justifyContent: "space-between",
-                    alignItems: 'center',
-                    borderRadius: 30,
-                    flexDirection: "row",
-                    flexWrap: "wrap",
-                    alignContent: 'center',
-                    borderColor: 'black',
-                    borderWidth: 1,
-                }}>
-                
-                    <View style={{backgroundColor: 'rgba(255, 255, 255, .2)', height:90, width: 90, borderRadius: 60, marginLeft: 20}}>
-                        <Image style={{height:60, width:60, margin: 15}} source={props.image}/>
-                    </View>
-                    <Text style={{color:'white', fontSize: 18, fontFamily:'sans-serif', marginRight: 20, paddingTop: 40}}>{props.text}</Text>
-            </TouchableOpacity>
-        </ImageBackground>
-*/

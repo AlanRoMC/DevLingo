@@ -1,11 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, View, ScrollView, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SubjectBtn from '../components/SubjectBtn';
 import { CONTENT } from '../dummy-data/data';
-//import { CONTENT } from '../dummy-data/content';
 
 const Content = ({ navigation }) => {
 
