@@ -5,6 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionBtn from '../components/SectionBtn';
 import LessonHdr from '../components/LessonHdr';
+import ModalVw from '../components/ModalVw';
 
 import { CONTENT } from '../dummy-data/data';
 
@@ -16,14 +17,15 @@ const Lessons = ({ route }) => {
     const titleStr = CONTENT[idK - 1].name;
     const imgC = CONTENT[idK - 1].img;
 
-    
-    const title = '¿Qué es Python?';
+    //info de prueba
+    const title1 = '¿Qué es Python?';
     const info = 'Python es uno de los lenguajes de programación más populares actualmente y es INTERPRETADO, es decir nosotros escribimos nuestro programa y Python lo interpreta y regresa un resultado. Python es un lenguaje MULTIPROPÓSITO, es decir, podemos crear códigos tanto para diferentes medios, ya sea Web, servidores, escritorio, aplicaciones web, entre otros. Lenguajes como PHP solo sirven para Web y es muy bueno para eso, pero no funciona para otro tipo de medios. Python es un lenguaje MULTIPARADIGMA, lo que significa que podemos usar varios paradigmas de programación, Estructurada, Orientado a Objetos, Imperativa, es decir que podemos programar de la forma que más nos guste. Python es un lenguaje MULTIPLATAFORMA Y DE SOFTWARE LIBRE, lo que significa que lo podemos utilizar tanto en Windows, Linux, Mac o cualquier Sistema Operativo.';
-    
     const newInfo = 'Armando se la come doblada';
 
+    //modal
     const [infoText, changeInfoText] = useState(info);
 
+    
     const onPressNextBtn = () => {
         changeInfoText(newInfo);
     };
@@ -31,7 +33,7 @@ const Lessons = ({ route }) => {
     function goToSubject() {
         props;
     }
-
+    //boton para mostrar modal
     const renderItem = ({ item }) => (
         <SectionBtn title={item.name} time={item.time} action={() => setModalVisible(true)} />
     );
@@ -59,59 +61,9 @@ const Lessons = ({ route }) => {
 
                     <View style={styles.body}>
 
-                        <Modal
-                            animationType="slide"
-                            transparent={true}
-                            visible={modalVisible}
-                            onRequestClose={() => {
-                                Alert.alert("Modal has been closed.");
-                                setModalVisible(!modalVisible);
-                            }}
-                        >
-                            <View style={styles.centeredView}>
-                                <View style={styles.modalView}>
-
-                                    <View style={{width: 200,  marginRight: '42.5%'}}>
-                                        <View style={{width:200, flexDirection: "row", flexWrap: "wrap", alignItems:'center', justifyContent:'space-between', margin:15}}>
-                                            <TouchableOpacity onPress={() => setModalVisible(!modalVisible)}>
-                                                <Image style={styles.icon22} source={require('../assets/cancelar.png')}/>
-                                            </TouchableOpacity>
-                                            <Text style={styles.modalText}>Tema</Text>
-                                        </View>
-                                    </View>
-                                        
-
-                                    <View style={styles.main2}>
-                                        <View style={{ alignItems: 'center', margin: 15, borderRadius: 30, borderColor: 'white', borderWidth: 1}}>
-                                            <LinearGradient
-                                                colors={['rgba(175, 19, 50, 1)','rgba(120, 16, 52, 1)']}
-                                                style={styles.background2}
-                                                start={{x: 0.55, y: 0.05}} end={{x: 0.1, y: 0.9}}
-                                            />
-                                            <Text style={{color: 'white', fontSize: 24, margin: 20, textAlign: 'center'}}>{ title }</Text>
-                                        </View>
-
-                                        <View style={{borderRadius: 30, borderColor: 'white', borderWidth: 1, margin: 15, height: 680, alignItems: 'center'}}>
-                                        <LinearGradient
-                                                colors={['rgba(175, 19, 50, 1)','rgba(120, 16, 52, 1)']}
-                                                style={styles.background2}
-                                                start={{x: 0.8, y: 0.4}} end={{x: 0, y: 0.5}}
-                                            />
-                                            <ScrollView>
-                                                <View style={{margin: 20}}>
-                                                    <Text style={{color:'white', fontSize: 18}}>{ infoText }</Text>
-                                                </View>
-                                                <TouchableOpacity style={{marginLeft: '45%', marginTop: 20, marginBottom: 20}} onPress={ onPressNextBtn }>
-                                                    <Image style={styles.icon2} source={require('../assets/derecho.png')}/>
-                                                </TouchableOpacity>
-                                            </ScrollView>
-                                        </View>
-                                    </View>
-
-                                </View>
-                            </View>
-                        </Modal>
-
+                        <ModalVw
+                            title={title1} content={info} onClose={() => setModalVisible(!modalVisible)} show={modalVisible}
+                        />
                         <FlatList
                             data={CONTENT[idK - 1].subtopics}
                             renderItem={renderItem}
