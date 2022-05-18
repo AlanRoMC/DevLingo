@@ -6,39 +6,37 @@ import { LinearGradient } from 'expo-linear-gradient';
 import SectionBtn from '../components/SectionBtn';
 import LessonHdr from '../components/LessonHdr';
 import ModalVw from '../components/ModalVw';
+import CheckBoxVw from '../components/CheckBoxVw';
 
 import { CONTENT } from '../dummy-data/data';
 
-const Lessons = ({ route }) => {
+const Lessons = ({ navigation, route }) => {
 
-    console.log(route.params.paramKey)
+    //console.log("--- ",route.params.paramKey)
     const idK = route.params.paramKey;
+
+    //console.log("---\n",CONTENT[idK - 1].lessons[0].lesson[0].name,"\n---")
 
     const titleStr = CONTENT[idK - 1].name;
     const imgC = CONTENT[idK - 1].img;
 
-    //info de prueba
-    const title1 = '¿Qué es Python?';
-    const info = 'Python es uno de los lenguajes de programación más populares actualmente y es INTERPRETADO, es decir nosotros escribimos nuestro programa y Python lo interpreta y regresa un resultado. Python es un lenguaje MULTIPROPÓSITO, es decir, podemos crear códigos tanto para diferentes medios, ya sea Web, servidores, escritorio, aplicaciones web, entre otros. Lenguajes como PHP solo sirven para Web y es muy bueno para eso, pero no funciona para otro tipo de medios. Python es un lenguaje MULTIPARADIGMA, lo que significa que podemos usar varios paradigmas de programación, Estructurada, Orientado a Objetos, Imperativa, es decir que podemos programar de la forma que más nos guste. Python es un lenguaje MULTIPLATAFORMA Y DE SOFTWARE LIBRE, lo que significa que lo podemos utilizar tanto en Windows, Linux, Mac o cualquier Sistema Operativo.';
-    const newInfo = 'Armando se la come doblada';
-
     //modal
-    const [infoText, changeInfoText] = useState(info);
+    //const [infoText, changeInfoText] = useState(info);
 
-    
+    var idInfo;
+/*
     const onPressNextBtn = () => {
         changeInfoText(newInfo);
     };
-    
+*/
+
     function goToSubject() {
         props;
     }
     //boton para mostrar modal
     const renderItem = ({ item }) => (
-        <SectionBtn title={item.name} time={item.time} action={() => setModalVisible(true)} />
+        <SectionBtn title={item.name} time={item.time} action={() => navigation.navigate("Subject", {paramKey: item})}/>
     );
-
-    console.log(CONTENT[idK - 1].subtopics)
 
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -61,9 +59,6 @@ const Lessons = ({ route }) => {
 
                     <View style={styles.body}>
 
-                        <ModalVw
-                            title={title1} content={info} onClose={() => setModalVisible(!modalVisible)} show={modalVisible}
-                        />
                         <FlatList
                             data={CONTENT[idK - 1].subtopics}
                             renderItem={renderItem}
@@ -78,6 +73,16 @@ const Lessons = ({ route }) => {
         </View>
     );
 }
+
+/*
+<CheckBoxVw
+    title={title1} onClose={() => setModalVisible(!modalVisible)} show={modalVisible}
+/>
+
+<ModalVw
+    title={title1} content={info} onClose={() => setModalVisible(!modalVisible)} show={modalVisible}
+/>
+*/
 
 export default Lessons;
 
