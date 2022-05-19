@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, View, FlatList, Modal, TouchableOpacity, Image, Text, ScrollView } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import SectionBtn from '../components/SectionBtn';

@@ -3,9 +3,13 @@ import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-export default function App({ route }) {
+const Subject = ({ navigation, route }) => {
 
     //console.log("------ ", route.params.paramKey)
+
+    function goToQuestions(){
+        navigation.navigate("Questions", {paramKey: route.params.paramKey.questions});
+    }
 
     return (
         <View style={styles.container}>
@@ -37,7 +41,7 @@ export default function App({ route }) {
                             <View style={{margin: 20}}>
                                 <Text style={{color:'white', fontSize: 18}}>{route.params.paramKey.info}</Text>
                             </View>
-                            <TouchableOpacity style={{marginLeft: '45%', marginTop: 20, marginBottom: 20}}>
+                            <TouchableOpacity style={{marginLeft: '45%', marginTop: 20, marginBottom: 20}} onPress={goToQuestions}>
                                 <Image style={styles.icon2} source={require('../assets/derecho.png')}/>
                             </TouchableOpacity>
                         </ScrollView>
@@ -51,6 +55,9 @@ export default function App({ route }) {
         </View>
     );
 }
+
+export default Subject;
+
 
 const styles = StyleSheet.create({
     container: {
