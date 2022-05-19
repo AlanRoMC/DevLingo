@@ -22,6 +22,10 @@ const Questions = ({ navigation, route }) => {
     const [checkBoxValue3, setCheckBoxValue3] = useState(false);
     const [checkBoxValue4, setCheckBoxValue4] = useState(false);
 
+    function verify(){
+        console.log("hola")
+    }
+
     return (
         <View style={styles.container}>
             <LinearGradient
@@ -67,7 +71,7 @@ const Questions = ({ navigation, route }) => {
                                     onPress={() => setCheckBoxValue4(!checkBoxValue4)}
                                 />
                             
-                            <TouchableOpacity style={{ marginTop: 20, marginBottom: 20 }}>
+                            <TouchableOpacity style={{ marginTop: 20, marginBottom: 20 }} onPress={verify}>
                                 <Image style={styles.icon2} source={require('../assets/derecho.png')} />
                             </TouchableOpacity>
                         </View>
