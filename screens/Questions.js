@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, CheckBox } from 'react-native-elements';
 import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -7,8 +7,9 @@ import VerificationBtn from '../components/VerificationBtn'
 
 const Questions = ({ navigation, route }) => {
 
-    var question = route.params.paramKey[0].question;
+    console.log(route.params.paramKey[0].answers.length)
 
+    var question = route.params.paramKey[0].question;
 
     var answer1 = route.params.paramKey[0].answers[0].text;
     var answer2 = route.params.paramKey[0].answers[1].text;

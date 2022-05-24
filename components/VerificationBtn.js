@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import { TouchableOpacity, Text, Image, View } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+import ConfettiCannon from 'react-native-confetti-cannon';
 
 export default function VerificationBtn(props) {
+
+    const confettiRef = useRef();
 
     function verificar(){
         console.log(props.action)
         if(props.action==1){
+            confettiRef.current.start();
             alert("Correcto");
         }
         else{
@@ -36,6 +39,15 @@ export default function VerificationBtn(props) {
             <View style={{ margin: 20, backgroundColor: 'rgba(120, 16, 52, 1)' }}>
                 <Text style={{color:'white', fontSize: 18, fontFamily:'sans-serif' }}>{props.text}</Text>
             </View>
+
+            <ConfettiCannon
+                count={150}
+                origin={{y:0, x:0}}
+                autoStart={false}
+                ref={confettiRef}
+                explosionSpeed='1000'
+                fallSpeed='3000'
+            />
             
         </TouchableOpacity>
     );

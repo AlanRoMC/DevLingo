@@ -11,23 +11,65 @@ export const CONTENT =[
                 image: "",
                 questions: [
                     {
-                        question: "Son de gran utilidad para poder tener una estructura y para poder realizar cambios a futuro, son una buena práctica y ayudan al entendimiento del código.",
+                        question: "¿Qué tipo de lenguaje de programación es Python?.",
+                        answers: [
+                            {
+                                score: 0,
+                                text: "Codificado."
+                            },
+                            {
+                                score: 0,
+                                text: "Compilado."
+                            },
+                            {
+                                score: 1,
+                                text: "Interpretado."
+                            },
+                            {
+                                score: 0,
+                                text: "Avanzado."
+                            }
+                        ]
+                    },
+                    {
+                        question: "¿Qué quiere decir MULTIPARADIGMA?.",
                         answers: [
                             {
                                 score: 1,
-                                text: "Los comentarios."
+                                text: "Que se puede programar con el paradigma que más le guste."
                             },
                             {
                                 score: 0,
-                                text: "Las líneas de código."
+                                text: "Que sólo se puede programar con un solo paradigma."
                             },
                             {
                                 score: 0,
-                                text: "Las variables."
+                                text: "Que es un lenguaje interpretado."
                             },
                             {
                                 score: 0,
-                                text: "Los ciclos"
+                                text: "Qué sirve para más de un propósito."
+                            }
+                        ]
+                    },
+                    {
+                        question: "¿Qué quiere decir MULTIPLATAFORMA?.",
+                        answers: [
+                            {
+                                score: 0,
+                                text: "Que solo se puede usar en Windows y iOS."
+                            },
+                            {
+                                score: 0,
+                                text: "Que puede cambiar su código dependiendo de la plataforma."
+                            },
+                            {
+                                score: 1,
+                                text: "Que se puede utilizar en cualquier plataforma."
+                            },
+                            {
+                                score: 0,
+                                text: "Que utiliza plataformas para programarse."
                             }
                         ]
                     },
@@ -691,7 +733,7 @@ export const CONTENT =[
                         ]
                     },
                     {
-                        question: "¿De qué tipo de variable a qué tipo se está convirtiendo?",
+                        question: "¿De qué tipo de variable a qué tipo se está convirtiendo?\r\n\r\n variable = input()\r\n variable2 = int(variable)",
                         answers: [
                             {
                                 score: 1,
@@ -869,7 +911,7 @@ export const CONTENT =[
                 image:"",
                 questions:[
                     {
-                        question: "¿Qué se va a imprimir en la consola?",
+                        question: "¿Qué se va a imprimir en la consola? \r\n\r\n numero = 3\r\n if(numero > 5):\r\n     print('Número mayor a 5')",
                         answers: [
                             {
                                 score: 1,
@@ -890,7 +932,7 @@ export const CONTENT =[
                         ]
                     },
                     {
-                        question: "¿Qué se va a imprimir en la consola?",
+                        question: "¿Qué se va a imprimir en la consola? \r\n\r\n numero = 8\r\n if(numero > 5):\r\n     print('Número mayor a 5')",
                         answers: [
                             {
                                 score: 0,
@@ -906,12 +948,12 @@ export const CONTENT =[
                             },
                             {
                                 score: 0,
-                                text: "5"
+                                text: "8"
                             }
                         ]
                     },
                     {
-                        question: "¿Qué se va a imprimir en la consola?",
+                        question: "¿Qué se va a imprimir en la consola? \r\n\r\n numero = 3\r\n if(numero >= 3):\r\n     print('Número mayor o igual a 3')",
                         answers: [
                             {
                                 score: 0,
@@ -927,7 +969,7 @@ export const CONTENT =[
                             },
                             {
                                 score: 0,
-                                text: "8"
+                                text: "3"
                             }
                         ]
                     }
@@ -940,7 +982,7 @@ export const CONTENT =[
                 image:"",
                 questions:[
                     {
-                        question: "¿Qué se va a imprimir en la consola?",
+                        question: "¿Qué se va a imprimir en la consola? \r\n\r\n numero = 3\r\n if(numero >= 8): \r\n     print('Juan')\r\n elif(numero < 5):\r\n     print('Pepe')",
                         answers: [
                             {
                                 score: 0,
@@ -961,7 +1003,7 @@ export const CONTENT =[
                         ]
                     },
                     {
-                        question: "¿Qué se va a imprimir en la consola?",
+                        question: "¿Qué se va a imprimir en la consola? \r\n\r\n numero = 5\r\n if(numero >= 8): \r\n     print('Juan')\r\n elif(numero < 5):\r\n     print('Pepe')",
                         answers: [
                             {
                                 score: 0,
@@ -982,7 +1024,7 @@ export const CONTENT =[
                         ]
                     },
                     {
-                        question: "¿Qué se va a imprimir en la consola?",
+                        question: "¿Qué se va a imprimir en la consola? \r\n\r\n numero = 6\r\n if(numero >= 8): \r\n     print('Juan')\r\n elif(numero < 6):\r\n     print('Pepe')\r\n elif(numero >= 6):\r\n     print('María')",
                         answers: [
                             {
                                 score: 1,
@@ -1011,7 +1053,7 @@ export const CONTENT =[
                 image:"",
                 questions:[
                     {
-                        question: "¿Qué se va a imprimir en la consola?",
+                        question: "¿Qué se va a imprimir en la consola? \r\n\r\n numero = 5\r\n if(numero >= 8): \r\n     print('Juan')\r\n elif(numero < 5):\r\n     print('Pepe')\r\n elif(numero < 7):\r\n     print('María')\r\n else:\r\n     print('Santi')",
                         answers: [
                             {
                                 score: 0,
@@ -1032,7 +1074,7 @@ export const CONTENT =[
                         ]
                     },
                     {
-                        question: "¿Qué se va a imprimir en la consola?",
+                        question: "¿Qué se va a imprimir en la consola? \r\n\r\n numero = 7\r\n if(numero >= 8): \r\n     print('Juan')\r\n elif(numero < 5):\r\n     print('Pepe')\r\n elif(numero < 7):\r\n     print('María')\r\n else:\r\n     print('Santi')",
                         answers: [
                             {
                                 score: 0,
@@ -1181,7 +1223,7 @@ export const CONTENT =[
                         ]
                     },
                     {
-                        question: "¿Cuántas veces se ejecuta este código?",
+                        question: "¿Cuántas veces se ejecuta este código? \r\n\r\n while(True):\r\n     numero = float(input('Ingresa un número'))\r\n     if(numero==0):\r\n         break",
                         answers: [
                             {
                                 score: 0,
@@ -1231,7 +1273,7 @@ export const CONTENT =[
                         ]
                     },
                     {
-                        question: "¿Qué valores se van a imprimir en la consola?",
+                        question: "¿Qué valores se van a imprimir en la consola? \r\n\r\n for variable in range (4):\r\n     print(variable)",
                         answers: [
                             {
                                 score: 0,
@@ -1252,7 +1294,7 @@ export const CONTENT =[
                         ]
                     },
                     {
-                        question: "¿Qué valores se van a imprimir en la consola?",
+                        question: "¿Qué valores se van a imprimir en la consola? \r\n\r\n for variable in range (14, 17):\r\n     print(variable)",
                         answers: [
                             {
                                 score: 1,
@@ -1273,7 +1315,7 @@ export const CONTENT =[
                         ]
                     },
                     {
-                        question: "¿Qué valores se van a imprimir en la consola?",
+                        question: "¿Qué valores se van a imprimir en la consola? \r\n\r\n for variable in range (0, 10, 2):\r\n     print(variable)",
                         answers: [
                             {
                                 score: 0,
