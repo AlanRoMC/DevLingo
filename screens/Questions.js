@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { CheckBox } from 'react-native-elements';
+import { Button, CheckBox } from 'react-native-elements';
 import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import VerificationBtn from '../components/VerificationBtn'
 
 const Questions = ({ navigation, route }) => {
-
 
     var question = route.params.paramKey[0].question;
 
@@ -15,12 +15,10 @@ const Questions = ({ navigation, route }) => {
     var answer3 = route.params.paramKey[0].answers[2].text;
     var answer4 = route.params.paramKey[0].answers[3].text;
 
-    var respuesta;
-
-    const [checkBoxValue1, setCheckBoxValue1] = useState(false);
-    const [checkBoxValue2, setCheckBoxValue2] = useState(false);
-    const [checkBoxValue3, setCheckBoxValue3] = useState(false);
-    const [checkBoxValue4, setCheckBoxValue4] = useState(false);
+    var response1 = route.params.paramKey[0].answers[0].score;
+    var response2 = route.params.paramKey[0].answers[1].score;
+    var response3 = route.params.paramKey[0].answers[2].score;
+    var response4 = route.params.paramKey[0].answers[3].score;
 
     function verify(){
         console.log("hola")
@@ -36,49 +34,23 @@ const Questions = ({ navigation, route }) => {
                 <View style={{ alignItems: 'center', justifyContent: 'center' }}>
 
                 <View style={styles.main}>
+                    <View style={styles.main2}>
+                            <View style={{ alignItems: 'center', margin: 15 }}>
+                                <Text style={{ color: 'white', fontSize: 24, margin: 20, textAlign: 'center' }}>{question}</Text>
+                            </View>
+                            <View style={{ margin: 10, height: 680, alignItems: 'center'}}>
 
-                <View style={styles.main2}>
-                        <View style={{ alignItems: 'center', margin: 15 }}>
-                            
-                            <Text style={{ color: 'white', fontSize: 24, margin: 20, textAlign: 'center' }}>{question}</Text>
-                        </View>
-                        <View style={{ margin: 10, height: 680, alignItems: 'center'}}>
-                                <CheckBox
-                                    containerStyle={{width: '100%', marginBottom: 30, marginTop: 30}}
-                                    title={answer1}
-                                    checked={checkBoxValue1}
-                                    onPress={() => setCheckBoxValue1(!checkBoxValue1)}
-                                />
-
-                                <CheckBox
-                                    containerStyle={{width: '100%', marginBottom: 30}}
-                                    title={answer2}
-                                    checked={checkBoxValue2}
-                                    onPress={() => setCheckBoxValue2(!checkBoxValue2)}
-                                />
-
-                                <CheckBox
-                                    containerStyle={{width: '100%', marginBottom: 30}}
-                                    title={answer3}
-                                    checked={checkBoxValue3}
-                                    onPress={() => setCheckBoxValue3(!checkBoxValue3)}
-                                />
-
-                                <CheckBox
-                                    containerStyle={{width: '100%', marginBottom: 30}}
-                                    title={answer4}
-                                    checked={checkBoxValue4}
-                                    onPress={() => setCheckBoxValue4(!checkBoxValue4)}
-                                />
-                            
-                            <TouchableOpacity style={{ marginTop: 20, marginBottom: 20 }} onPress={verify}>
-                                <Image style={styles.icon2} source={require('../assets/derecho.png')} />
-                            </TouchableOpacity>
+                                <VerificationBtn text={answer1} action={response1}/>
+                                <VerificationBtn text={answer2} action={response2}/>
+                                <VerificationBtn text={answer3} action={response3}/>
+                                <VerificationBtn text={answer4} action={response4}/>
+                                
+                                <TouchableOpacity style={{ marginTop: 20, marginBottom: 20 }} onPress={verify}>
+                                    <Image style={styles.icon2} source={require('../assets/derecho.png')} />
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </View>
-
-                </View>
-
                 </View>
             
         <StatusBar style={"light"} />
