@@ -7,8 +7,7 @@ export default function VerificationBtn(props) {
     const confettiRef = useRef();
 
     function verificar(){
-        console.log(props.action)
-        if(props.action==1){
+        if(props.action == 1){
             confettiRef.current.start();
             alert("Correcto");
         }

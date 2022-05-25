@@ -1,28 +1,45 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { Button, CheckBox } from 'react-native-elements';
+import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import VerificationBtn from '../components/VerificationBtn'
 
 const Questions = ({ navigation, route }) => {
 
-    console.log(route.params.paramKey[0].answers.length)
+    var lenQtn = route.params.paramKey.length;
+    
+    let [iter, setIter] = useState(0)
 
-    var question = route.params.paramKey[0].question;
+    let [question, setQuestion] = useState(route.params.paramKey[iter].question)
 
-    var answer1 = route.params.paramKey[0].answers[0].text;
-    var answer2 = route.params.paramKey[0].answers[1].text;
-    var answer3 = route.params.paramKey[0].answers[2].text;
-    var answer4 = route.params.paramKey[0].answers[3].text;
+    let [answer1, setAnswer1] = useState(route.params.paramKey[iter].answers[0].text);
+    let [answer2, setAnswer2] = useState(route.params.paramKey[iter].answers[1].text);
+    let [answer3, setAnswer3] = useState(route.params.paramKey[iter].answers[2].text);
+    let [answer4, setAnswer4] = useState(route.params.paramKey[iter].answers[3].text);
 
-    var response1 = route.params.paramKey[0].answers[0].score;
-    var response2 = route.params.paramKey[0].answers[1].score;
-    var response3 = route.params.paramKey[0].answers[2].score;
-    var response4 = route.params.paramKey[0].answers[3].score;
+    let [response1, setResponse1] = useState(route.params.paramKey[iter].answers[0].score);
+    let [response2, setResponse2] = useState(route.params.paramKey[iter].answers[1].score);
+    let [response3, setResponse3] = useState(route.params.paramKey[iter].answers[2].score);
+    let [response4, setResponse4] = useState(route.params.paramKey[iter].answers[3].score);
+    
+    function verify(){      
+        setIter(iter += 1)
 
-    function verify(){
-        console.log("hola")
+        if(iter >= lenQtn){
+            navigation.navigate("Content")
+        }else{
+            setQuestion(route.params.paramKey[iter].question);
+    
+            setAnswer1(route.params.paramKey[iter].answers[0].text);
+            setAnswer2(route.params.paramKey[iter].answers[1].text);
+            setAnswer3(route.params.paramKey[iter].answers[2].text);
+            setAnswer4(route.params.paramKey[iter].answers[3].text);
+
+            setResponse1(route.params.paramKey[iter].answers[0].score);
+            setResponse2(route.params.paramKey[iter].answers[1].score);
+            setResponse3(route.params.paramKey[iter].answers[2].score);
+            setResponse4(route.params.paramKey[iter].answers[3].score);
+        }
     }
 
     return (
