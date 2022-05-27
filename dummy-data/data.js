@@ -227,7 +227,7 @@ export const CONTENT =[
             {id: 3,
                 name: "Mostrar datos en Pantalla",
                 time: " min",
-                info: "Los comentarios dentro de nuestro código son de gran utilidad para poder tener una estructura y para poder realizar cambios a futuro, son una buena práctica y ayudan al entendimiento del código.\r\nContamos con 2 formas para poder realizar un comentario dentro de nuestro código en Python:\r\n\r\n1.- Comentarios de una sola línea, el cual se realiza poniendo primero el signo de gato.\r\n2.- Comentarios de varias líneas, se realizan utilizando 3 comillas simples al inicio y final del comentario.",
+                info: "La función print() nos ayuda a mostrar desde texto, hasta los valores guardados en una variable, al mismo tiempo podemos concatenar texto y el valor de una variable, separando ambos con una coma.",
                 image: "",
                 questions:[
                     {
@@ -298,7 +298,7 @@ export const CONTENT =[
             {id: 4,
                 name: "Lectura de datos por teclado",
                 time: " min",
-                info: "La función print() nos ayuda a mostrar desde texto, hasta los valores guardados en una variable, al mismo tiempo podemos concatenar texto y el valor de una variable, separando ambos con una coma.",
+                info: "Para poder mostrar un resultado en la consola al realizar nuestro programa, haremos uso de la función: input().\r\nLa función input() nos ayuda para recibir valores por teclado y guardarlos en una variable, posteriomente estas variables las podemos utilizar dentro de nuestro código.\r\nAlgo importante a considerar es que si ingresamos mediante una función input() valores por teclado, Python considerará todo como tipo str, incluso si se ingresan números, es por eso que debemos conocer el como convertir entre tipos de datos, algo que veremos en temas más adelante.",
                 image: "",
                 questions:[
                     {
