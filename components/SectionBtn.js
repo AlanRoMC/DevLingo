@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, View } from 'react-native';
+import { TouchableOpacity, Text, View, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function SubjectBtn(props) {
@@ -10,8 +10,8 @@ export default function SubjectBtn(props) {
                 style={{borderRadius: 30, position: 'absolute', left: 0, right: 0, top: 0, height: '100%',}}
                 start={{x: 0.55, y: 0.05}} end={{x: 0.1, y: 0.9}}
             />
-            <View style={{ width: 380, borderRadius: 30, borderColor: 'black', borderWidth: 1, alignItems: 'flex-end'}}>
-                <View style={{ width: 375 }}>
+            <View style={{ width: 360, borderRadius: 30, borderColor: 'black', borderWidth: 1, alignItems: 'flex-end'}}>
+                <View style={{ width: 355 }}>
                     <Text style={{color: 'white', fontSize: 24, marginLeft: 10, marginTop: 10 , marginBottom: 5}}>{props.title}</Text>
                 </View>
                 <View style={{ height: 2, width: 285, backgroundColor: 'white' }}></View>

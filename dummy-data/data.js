@@ -8,7 +8,7 @@ export const CONTENT =[
                 name: "Introducción",
                 time: "5 min",
                 info: "Python es uno de los lenguajes de programación más populares actualmente y es INTERPRETADO, es decir nosotros escribimos nuestro programa y Python lo interpreta y regresa un resultado.\r\nPython es un lenguaje MULTIPROPÓSITO, es decir, podemos crear códigos tanto para diferentes medios, ya sea Web, servidores, escritorio, aplicaciones web, entre otros. Lenguajes como PHP solo sirven para Web y es muy bueno para eso, pero no funciona para otro tipo de medios.\r\nPython es un lenguaje MULTIPARADIGMA, lo que significa que podemos usar varios paradigmas de programación, por ejemplo: Estructurada, Orientado a Objetos, Imperativa, es decir que podemos programar de la forma que más nos guste.\r\nPython es un lenguaje MULTIPLATAFORMA Y DE SOFTWARE LIBRE, lo que significa que lo podemos utilizar tanto en Windows, Linux, Mac o cualquier Sistema Operativo.\r\n",
-                image: "",
+                image: "../assets/Python.png",
                 questions: [
                     {
                         question: "¿Qué tipo de lenguaje de programación es Python?.",
@@ -86,7 +86,7 @@ export const CONTENT =[
                 name: "Comentarios",
                 time: " min",
                 info: "Los comentarios dentro de nuestro código son de gran utilidad para poder tener una estructura y para poder realizar cambios a futuro, son una buena práctica y ayudan al entendimiento del código.\r\nContamos con 2 formas para poder realizar un comentario dentro de nuestro código en Python:\r\n\r\n1.- Comentarios de una sola línea, el cual se realiza poniendo primero el signo de gato.\r\n2.- Comentarios de varias líneas, se realizan utilizando 3 comillas simples al inicio y final del comentario.",
-                image: "",
+                image: "../assets/1comentarios.png",
                 questions:[
                     {
                         question: "Son de gran utilidad para poder tener una estructura y para poder realizar cambios a futuro, son una buena práctica y ayudan al entendimiento del código.",
@@ -157,7 +157,7 @@ export const CONTENT =[
                 name: "Sangría",
                 time: " min",
                 info: "La sangría se refiere a los espacios al comienzo de una línea de código.\r\nMientras que en otros lenguajes de programación la sangría en el código es solo para facilitar la lectura, la sangría en Python es muy importante.\r\nPython usa sangría para indicar un bloque de código, si omites la sangría Python dará un error.\r\nLa cantidad de espacios depende de usted como programador, el uso más común es cuatro, pero tiene que ser al menos uno.\r\n",
-                image: "",
+                image: "../assets/2sangria.png",
                 questions:[
                     {
                         question: "¿A qué se refiere la sangría en Python?",
@@ -227,8 +227,8 @@ export const CONTENT =[
             {id: 3,
                 name: "Mostrar datos en Pantalla",
                 time: " min",
-                info: "Los comentarios dentro de nuestro código son de gran utilidad para poder tener una estructura y para poder realizar cambios a futuro, son una buena práctica y ayudan al entendimiento del código.\r\nContamos con 2 formas para poder realizar un comentario dentro de nuestro código en Python:\r\n\r\n1.- Comentarios de una sola línea, el cual se realiza poniendo primero el signo de gato.\r\n2.- Comentarios de varias líneas, se realizan utilizando 3 comillas simples al inicio y final del comentario.",
-                image: "",
+                info: "La función print() nos ayuda a mostrar desde texto, hasta los valores guardados en una variable, al mismo tiempo podemos concatenar texto y el valor de una variable, separando ambos con una coma.",
+                image: "../assets/3mostrarDatos.png",
                 questions:[
                     {
                         question: "¿Para qué sirve la función print()?",
@@ -298,8 +298,8 @@ export const CONTENT =[
             {id: 4,
                 name: "Lectura de datos por teclado",
                 time: " min",
-                info: "La función print() nos ayuda a mostrar desde texto, hasta los valores guardados en una variable, al mismo tiempo podemos concatenar texto y el valor de una variable, separando ambos con una coma.",
-                image: "",
+                info: "Para poder mostrar un resultado en la consola al realizar nuestro programa, haremos uso de la función: input().\r\nLa función input() nos ayuda para recibir valores por teclado y guardarlos en una variable, posteriomente estas variables las podemos utilizar dentro de nuestro código.\r\nAlgo importante a considerar es que si ingresamos mediante una función input() valores por teclado, Python considerará todo como tipo str, incluso si se ingresan números, es por eso que debemos conocer el como convertir entre tipos de datos, algo que veremos en temas más adelante.",
+                image: "../assets/4lecturaTeclado.png",
                 questions:[
                     {
                         question: "¿Para qué sirve la función input()?",
@@ -349,7 +349,7 @@ export const CONTENT =[
                 name: "Operadores Aritméticos",
                 time: " min",
                 info: "Para trabajar con Python podemos hacer uso de los Operadores Aritméticos, tales como:\r\n*  Suma: 5 + 5\r\n* Resta: 5 - 5\r\n* Multiplicación: 5 * 5\r\n* División (con decimales): 5 / 5\r\n* División (sin decimales): 21 // 5\r\n* Resto (modulo) de la división: 21 % 5\r\n- Potencia: 2 ** 2\r\n* Raíz cuadrada: math.sqrt(9)\r\nComo observamos en la mayoría de los operadores son similares a como los usaríamos en una calculadora, donde vemos un cambio es a partir de la División sin decimales.\r\n\r\nPython respeta la jerarquía de operaciones, la cual es la siguiente:\r\n\r\n1.- Paréntesis\r\n2.- Exponentes o raíces\r\n3.- Multiplicaciones\r\n4.- Divisiones\r\n5.- Adiciones y sustracciones\r\n\r\nDebes tomarlo en cuenta al realizar operaciones complejas o en una sola línea, así no tendrás errores en tus resultados\r\n",
-                image: "",
+                image: "../assets/5operadoresArit.png",
                 questions:[
                     {
                         question: "¿Qué símbolo se utiliza para realizar una potencia?",
