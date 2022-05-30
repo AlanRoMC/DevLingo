@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -9,7 +9,7 @@ const Subject = ({ navigation, route }) => {
         navigation.navigate("Questions", {paramKey: route.params.paramKey.questions});
     }
 
-    console.log(route.params.paramKey.image);
+    //const [image, setImage] = useState(route.params.paramKey.image);
 
     return (
         <View style={styles.container}>
@@ -43,7 +43,9 @@ const Subject = ({ navigation, route }) => {
                                     <Text style={{color:'white', fontSize: 18}}>{route.params.paramKey.info}</Text>
                                 </View>
 
-                                    <Image style={{ height: 180, width: Dimensions.get('window').width * .86, margin:10 }} source={ require('../assets/Python.png') } />
+                                
+                                <Image style={{ height: 200, width: '100%', resizeMode: "contain"}} source={ route.params.paramKey.image } />
+                                
 
                                 <TouchableOpacity style={{marginLeft: '45%', marginTop: 20, marginBottom: 20}} onPress={goToQuestions}>
                                     <Image style={styles.icon2} source={require('../assets/derecho.png')}/>
