@@ -1,18 +1,21 @@
 import React, {useRef} from 'react';
-import { TouchableOpacity, Text, Image, View } from 'react-native';
+import { TouchableOpacity, Text, View, ToastAndroid } from 'react-native';
 import ConfettiCannon from 'react-native-confetti-cannon';
 
 export default function VerificationBtn(props) {
 
     const confettiRef = useRef();
 
+
+
     function verificar(){
         if(props.action == 1){
             confettiRef.current.start();
-            alert("Correcto");
+            ToastAndroid.show("¡Respuesta correcta!", 2000)
+            
         }
         else{
-            alert("Incorrecto")
+            ToastAndroid.show("¡Upss, te equivocaste!", 2000)
         }
     }
 
