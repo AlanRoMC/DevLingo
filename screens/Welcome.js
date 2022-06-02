@@ -1,29 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function App({ navigation }) {
-    const showAlert = () =>
-        Alert.alert(
-            "Alert Title",
-            "My Alert Msg",
-            [
-                {
-                    text: "Cancel",
-                    onPress: () => Alert.alert("Cancel Pressed"),
-                    style: "cancel",
-                },
-            ],
-            {
-                cancelable: true,
-                onDismiss: () =>
-                    Alert.alert(
-                        "This alert was dismissed by tapping outside of the alert dialog."
-                    ),
-            }
-        );
-        
+    
     function goToContent(){
         navigation.navigate("Content");
     }
@@ -86,4 +67,3 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
 });
-//<TouchableOpacity onPress={showAlert} style={{backgroundColor: 'green'}}>

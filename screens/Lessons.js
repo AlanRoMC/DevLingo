@@ -91,14 +91,5 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width * 1,
         height: Dimensions.get('window').height * .69,
         alignItems: 'center',
-    },
-    centeredView: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    icon2: {
-        width: 40,
-        height: 40,
     }
 });

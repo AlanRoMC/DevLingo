@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React from 'react';
 import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -8,8 +8,6 @@ const Subject = ({ navigation, route }) => {
     function goToQuestions(){
         navigation.navigate("Questions", {paramKey: route.params.paramKey.questions});
     }
-
-    //const [image, setImage] = useState(route.params.paramKey.image);
 
     return (
         <View style={styles.container}>

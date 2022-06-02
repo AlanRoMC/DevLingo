@@ -8,7 +8,7 @@ export default function LessonHdr(props) {
                 <View style={{ backgroundColor: 'rgba(255, 255, 255, .2)', height: 90, width: 90, borderRadius: 60, marginLeft: 20 }}>
                     <Image style={{ height: 60, width: 60, margin: 15 }} source={props.image} />
                 </View>
-                <View style={{width: 250 , alignItems: 'flex-end'}}>
+                <View style={{ width: 250 , alignItems: 'flex-end' }}>
                     <Text style={{ color: 'white', fontSize: 26, fontFamily: 'sans-serif', marginRight: 20 }}>{props.title}</Text>
                 </View>
             </View>

@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import VerificationBtn from '../components/VerificationBtn'
 
@@ -92,14 +92,6 @@ const styles = StyleSheet.create({
         right: 0,
         top: 0,
         height: '100%',
-    },
-    background2: {
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        height: '100%',
-        borderRadius: 30
     },
     main:{
         backgroundColor: '#971133',

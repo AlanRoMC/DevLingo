@@ -31,7 +31,6 @@ export default function SubjectBtn(props) {
             <View style={{ width: 240, alignItems: 'flex-end', marginRight: 10, paddingTop: 40, marginBottom: 20}}>
                 <Text style={{color:'white', fontSize: 18, fontFamily:'sans-serif' }}>{props.text}</Text>
             </View>
-            
         </TouchableOpacity>
     );
 }

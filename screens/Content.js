@@ -30,7 +30,7 @@ const Content = ({ navigation }) => {
 
             </View>
             
-        <StatusBar style={"light"} />
+            <StatusBar style={"light"} />
         </View>
     );
 }

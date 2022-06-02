@@ -6,13 +6,10 @@ export default function VerificationBtn(props) {
 
     const confettiRef = useRef();
 
-
-
     function verificar(){
         if(props.action == 1){
             confettiRef.current.start();
             ToastAndroid.show("¡Respuesta correcta!", 2000)
-            
         }
         else{
             ToastAndroid.show("¡Upss, te equivocaste!", 2000)
